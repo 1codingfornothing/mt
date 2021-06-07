@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>注册登录</title>
+<link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <div class="content">
+        <form th:action="@{login}" method="get">
+        <div class="form sign-in">
+            <h2>欢迎回来</h2>
+            <label>
+                <span>用户名</span>
+                <input type="name" name="username"/>
+            </label>
+            <label>
+                <span>密码</span>
+                <input type="password" name="password"/>
+            </label>
+            <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
+            <input type="submit" value="登录" />
+
+        </div>
+
+        </form>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现大量机会！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <form th:action="@{register}" method="post">
+            <div class="form sign-up">
+                <h2>立即注册</h2>
+                <link>
+                    <span>姓名</span>
+                    <input type="text" name="username"/>
+                </label>
+                <label>
+                    <span>登录用户名</span>
+                    <input type="text" name="loginName"/>
+                </label>
+                <label>
+                    <span>登录密码</span>
+                    <input type="password" name="password"/>
+                </label>
+<!--                <label>-->
+<!--                    <span>职位</span>-->
+<!--                    <input type="text" name="position"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>所属部门</span>-->
+<!--                    <input type="text" name="department"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>电子邮箱</span>-->
+<!--                    <input type="text" name="email"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>手机号码</span>-->
+<!--                    <input type="text" name="phonenum"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>是否为管理者</span>-->
+<!--                    <input type="text" name="ismanager"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>状态</span>-->
+<!--                    <input type="text" name="Status"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>描述</span>-->
+<!--                    <input type="text" name="description"/>-->
+<!--                </label>-->
+<!--                <label>-->
+<!--                    <span>备注</span>-->
+<!--                    <input type="text" name="remark"/>-->
+<!--                </label>-->
+                <input type="submit" value="注册" />
+
+            </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+	
+	<div style="text-align:center;">
+
+</div>
+</body>
+
+</html>

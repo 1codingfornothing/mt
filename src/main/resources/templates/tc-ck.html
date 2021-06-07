@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <title>弹窗-仓库管理</title>
@@ -55,10 +55,12 @@ td{font-size:12px;line-height:18px;}
 <div class="formoverlay"></div>
  <table cellpadding="0" cellspacing="0" border="0" class="formborder" style="z-index:99;position:absolute;left:359px;top:40px;width:880px; display: block;" >
   <tbody>
+  <form th:action="depotadd" method="post">
    
    <tr>
    <td align="left" valign="top" style="width:880px;height:579px;background:#fff;">
     <div class="formcontentsize" style="width:auto;height:auto;">
+
      <!--仓库基本信息   开始-->
      <div class="layoutitem">
       <div class="layout-tit">
@@ -68,34 +70,22 @@ td{font-size:12px;line-height:18px;}
        <ul>
         <li>
          <div class="item-input">
-          <label class="item-label"> 仓库ID</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
+          <label class="item-label"> 仓库名称</label>
+          <input type="text" class="layoutitemcon"  name="name" maxlength="50">
          </div>
           <div class="item-input">
-          <label class="item-label">仓库名称</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
+          <label class="item-label">仓库类型</label>
+          <input type="text" class="layoutitemcon" name="type" maxlength="50">
+
+
+          </div>
+         <div class="item-input">
+          <label class="item-label">仓库容量</label>
+          <input type="text" class="layoutitemcon" name="size" maxlength="50">
          </div>
         </li>
         
-         <li>
-         <div class="item-input">
-          <label class="item-label"> 负责人</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-         <div class="item-input">
-          <label class="item-label"> 仓库负责人</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-        </li>
-         <li>
-         <div class="item-input">
-          <label class="item-label"> 开始时间</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-         <div class="item-input">
-          <label class="item-label"> 结束时间</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
+
         </li>
       
         <li>
@@ -119,94 +109,86 @@ td{font-size:12px;line-height:18px;}
           <select name="area" class="layout-sele">
           <option value="长安区">长安区</option>
          </select>
-         <input type="text" class="layout-input" placeholder="请输入详细地址">
+         <input type="text" class="layout-input" name="address" placeholder="请输入详细地址">
          </div>
         </li>
-         <li>
-         <div class="item-input1">
-          <label class="item-label"> 缩略图</label>
-          <input type="file" size="30" class="lab">
-         </div>
-         
-       
-         </li>
+
          <li>
          <div class="item-input1">
           <label class="item-label"> 备注</label>
-          <input type="text" class="layout-bz" >
+          <input type="text" name="remark" class="layout-bz" >
          </div>
         </li>
        </ul>
       </div>
      </div>
+      <input type="submit" value="Submit" />
+
      <!--仓库基本信息   结束-->
-     <!--联系人信息   开始-->
-     <div class="layoutitem  item-ts"  >
-      <div class="layout-tit">
-       联系人信息
-      </div>
-      <div class="layout-xx">
-       <ul>
-        <li>
-         <div class="item-input">
-          <label class="item-label">ID</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-          <div class="item-input">
-          <label class="item-label">仓库ID</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-        </li>
-        
-         <li>
-         <div class="item-input">
-          <label class="item-label">联系人称呼</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-         <div class="item-input">
-          <label class="item-label">联系人电话</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-        </li>
-        <li>
-         <div class="item-input">
-          <label class="item-label">联系人QQ</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-         <div class="item-input">
-          <label class="item-label"> 联系人邮箱</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-        </li>
-        
-        <li>
-         <div class="item-input">
-          <label class="item-label">微信账号</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-         <div class="item-input">
-          <label class="item-label">联系人排序</label>
-          <input type="text" class="layoutitemcon" maxlength="50">
-         </div>
-        </li>
-        
-        <li>
-         <div class="item-input1">
-          <label class="item-label">备注</label>
-          <input type="text" class="layout-bz">
-         </div>
-        </li>
-       </ul>
-      </div>
-     </div>
-     <div class="layoutitem-add">
-      <a href="#" class="add">添加</a>
-      <a href="#" class="bc">保存</a> 
-      <a href="#" class="tc">退出</a>               
-     </div>
+<!--     &lt;!&ndash;联系人信息   开始&ndash;&gt;-->
+<!--     <div class="layoutitem  item-ts"  >-->
+<!--      <div class="layout-tit">-->
+<!--       联系人信息-->
+<!--      </div>-->
+<!--      <div class="layout-xx">-->
+<!--       <ul>-->
+<!--        <li>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">联系人姓名</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--          <div class="item-input">-->
+<!--          <label class="item-label">仓库ID</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--        </li>-->
+<!--        -->
+<!--         <li>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">联系人称呼</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">联系人电话</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">联系人QQ</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label"> 联系人邮箱</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--        </li>-->
+<!--        -->
+<!--        <li>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">微信账号</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--         <div class="item-input">-->
+<!--          <label class="item-label">联系人排序</label>-->
+<!--          <input type="text" class="layoutitemcon" maxlength="50">-->
+<!--         </div>-->
+<!--        </li>-->
+<!--        -->
+<!--        <li>-->
+<!--         <div class="item-input1">-->
+<!--          <label class="item-label">备注</label>-->
+<!--          <input type="text" class="layout-bz">-->
+<!--         </div>-->
+<!--        </li>-->
+<!--       </ul>-->
+<!--      </div>-->
+<!--     </div>-->
+
     </div>
    </td>
    </tr>
+  </form>
   </tbody>
  </table>
        <!--弹窗 仓库管理开始-->

@@ -1,4 +1,9 @@
 package cn.fourtwoone.mt.config;
 
-public class MyConfig {
+import org.springframework.core.Ordered;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+public class MyConfig implements WebMvcConfigurer {
+
 }

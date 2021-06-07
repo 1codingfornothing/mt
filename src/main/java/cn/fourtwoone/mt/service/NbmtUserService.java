@@ -18,6 +18,9 @@ public interface NbmtUserService {
      * @param id 主键
      * @return 实例对象
      */
+
+    NbmtUser login(String username, String password);
+
     NbmtUser queryById(Long id);
 
     /**

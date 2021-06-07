@@ -24,6 +24,13 @@
         where id = #{id}
     </select>
 
+<!--    &lt;!&ndash;查询所有&ndash;&gt;-->
+<!--    <select id="queryAll" resultMap="NbmtDepotMap">-->
+<!--        select *-->
+<!--        from nbmt.nbmt_depot-->
+<!--    </select>-->
+
+
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="NbmtDepotMap">
         select id,

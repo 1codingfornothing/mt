@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/depotsave}" method="post">
+
+    <tr>
+        <td align="left" valign="top" style="width:880px;height:579px;background:#fff;">
+            <div class="formcontentsize" style="width:auto;height:auto;">
+
+                <!--仓库基本信息   开始-->
+                <div class="layoutitem">
+                    <div class="layout-tit">
+                       修改仓库信息
+                    </div>
+                    <div class="layout-xx">
+                        <ul>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label">仓库ID</label>
+                                    <input type="text" class="layoutitemcon" name="id" maxlength="50">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label"> 仓库名称</label>
+                                    <input type="text" class="layoutitemcon"  name="name" maxlength="50">
+                                </div>
+                                <div class="item-input">
+                                    <label class="item-label">仓库类型</label>
+                                    <input type="text" class="layoutitemcon" name="type" maxlength="50">
+
+
+                                </div>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label">仓库容量</label>
+                                    <input type="text" class="layoutitemcon" name="size" maxlength="50">
+                                </div>
+                            </li>
+                            </li>
+
+
+                            </li>
+
+                            <li>
+                                <div class="item-input1">
+                                    <label class="item-label">仓库地址</label>
+                                    <select name="country" class="layout-sele">
+                                        <option value="中国">中国</option>
+                                    </select>
+                                    <select name="province" class="layout-sele">
+                                        <option value="河北省">河北省</option>
+                                        <option value="北京市">北京市</option>
+                                        <option value="陕西省">陕西省</option>
+                                        <option value="山西省">山西省</option>
+                                        <option value="其他">其他</option>
+                                    </select>
+                                    <select name="city" class="layout-sele">
+                                        <option value="石家庄市">石家庄市</option>
+                                        <option value="长春市">长春市</option>
+                                        <option value="吉林市">吉林市</option>
+                                    </select>
+                                    <select name="area" class="layout-sele">
+                                        <option value="长安区">长安区</option>
+                                    </select>
+                                    <input type="text" class="layout-input" name="address" placeholder="请输入详细地址">
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-input1">
+                                    <label class="item-label"> 备注</label>
+                                    <input type="text" name="remark" class="layout-bz" >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="submit" value="提交修改" />
+
+
+
+            </div>
+        </td>
+    </tr>
+</form>
+</body>
+</html>

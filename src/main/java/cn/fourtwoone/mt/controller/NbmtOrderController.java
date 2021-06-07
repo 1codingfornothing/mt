@@ -2,6 +2,7 @@ package cn.fourtwoone.mt.controller;
 
 import cn.fourtwoone.mt.entity.NbmtOrder;
 import cn.fourtwoone.mt.service.NbmtOrderService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2021-06-01 20:28:16
  */
-@RestController
+@Controller
 @RequestMapping("nbmtOrder")
 public class NbmtOrderController {
     /**
@@ -31,5 +32,7 @@ public class NbmtOrderController {
     public NbmtOrder selectOne(Long id) {
         return this.nbmtOrderService.queryById(id);
     }
+
+
 
 }

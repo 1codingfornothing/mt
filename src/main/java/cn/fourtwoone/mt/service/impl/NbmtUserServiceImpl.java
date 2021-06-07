@@ -19,12 +19,19 @@ public class NbmtUserServiceImpl implements NbmtUserService {
     @Resource
     private NbmtUserDao nbmtUserDao;
 
+    @Override
+    public NbmtUser login(String username, String password) {
+        return this.nbmtUserDao.login(username, password);
+    }
+
     /**
      * 通过ID查询单条数据
      *
      * @param id 主键
      * @return 实例对象
      */
+
+
     @Override
     public NbmtUser queryById(Long id) {
         return this.nbmtUserDao.queryById(id);

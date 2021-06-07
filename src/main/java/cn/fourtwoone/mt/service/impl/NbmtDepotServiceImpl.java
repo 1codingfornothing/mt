@@ -19,6 +19,15 @@ public class NbmtDepotServiceImpl implements NbmtDepotService {
     @Resource
     private NbmtDepotDao nbmtDepotDao;
 
+    /*
+    * 查询所有
+    * */
+//    @Override
+//    public List<NbmtDepot> queryAll() {
+//        return this.nbmtDepotDao.queryAll();
+//    }
+
+
     /**
      * 通过ID查询单条数据
      *

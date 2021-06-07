@@ -20,6 +20,10 @@ public interface NbmtDepotService {
      */
     NbmtDepot queryById(Long id);
 
+
+
+//    List<NbmtDepot> queryAll();
+
     /**
      * 查询多条数据
      *

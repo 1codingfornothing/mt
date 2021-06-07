@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/productsave}" method="post">
+
+    <tr>
+        <td align="left" valign="top" style="width:880px;height:579px;background:#fff;">
+            <div class="formcontentsize" style="width:auto;height:auto;">
+
+                <!--新增产品   开始-->
+                <div class="layoutitem">
+                    <div class="layout-tit">
+                        修改产品信息
+                    </div>
+                    <div class="layout-xx">
+                        <ul>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label">马桶ID</label>
+                                    <input type="text" class="layoutitemcon" name="id" maxlength="50">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label"> 马桶名称</label>
+                                    <input type="text" class="layoutitemcon"  name="name" maxlength="50">
+                                </div>
+                                <div class="item-input">
+                                    <label class="item-label">制造商</label>
+                                    <input type="text" class="layoutitemcon" name="mfrs" maxlength="50">
+
+
+                                </div>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label">型号</label>
+                                    <input type="text" class="layoutitemcon" name="model" maxlength="50">
+                                </div>
+                            </li>
+                            </li>
+
+
+                            </li>
+
+                            <li>
+                                <div class="item-input1">
+                                    <label class="item-label">规格</label>
+
+                                    <input type="text" class="layout-input" name="standard" >
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-input1">
+                                    <label class="item-label"> 颜色</label>
+                                    <input type="text" name="color" class="layout-bz" >
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-input">
+                                    <label class="item-label"> 单位</label>
+                                    <input type="text" class="layoutitemcon"  name="unit" maxlength="50">
+                                </div>
+                                <div class="item-input">
+                                    <label class="item-label">备注</label>
+                                    <input type="text" class="layoutitemcon" name="remark" maxlength="50">
+
+
+                                </div>
+
+                            </li>
+
+
+                            </li>
+
+                            <!--                                                        <li>-->
+                            <!--                                                            <div class="item-input1">-->
+                            <!--                                                                <label class="item-label">创建时间</label>-->
+
+                            <!--                                                                <input type="text" class="layout-input" name="createTime" >-->
+                            <!--                                                            </div>-->
+                            <!--                                                        </li>-->
+
+                            <!--                                                        <li>-->
+                            <!--                                                            <div class="item-input1">-->
+                            <!--                                                                <label class="item-label"> 更新时间</label>-->
+                            <!--                                                                <input type="text" name="remark" class="updateTime" >-->
+                            <!--                                                            </div>-->
+                            <!--                                                        </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <input type="submit" value="提交修改" />
+
+
+
+            </div>
+        </td>
+    </tr>
+</form>
+</body>
+</html>

@@ -2,6 +2,7 @@ package cn.fourtwoone.mt.controller;
 
 import cn.fourtwoone.mt.entity.NbmtClient;
 import cn.fourtwoone.mt.service.NbmtClientService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2021-06-01 20:28:14
  */
-@RestController
+@Controller
 @RequestMapping("nbmtClient")
 public class NbmtClientController {
     /**

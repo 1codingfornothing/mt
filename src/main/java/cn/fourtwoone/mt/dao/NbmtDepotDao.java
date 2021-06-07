@@ -1,6 +1,7 @@
 package cn.fourtwoone.mt.dao;
 
 import cn.fourtwoone.mt.entity.NbmtDepot;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.List;
  * @author makejava
  * @since 2021-06-01 20:28:16
  */
+
+
 public interface NbmtDepotDao {
 
     /**
@@ -21,6 +24,7 @@ public interface NbmtDepotDao {
      */
     NbmtDepot queryById(Long id);
 
+//    List<NbmtDepot> queryAll();
     /**
      * 查询指定行数据
      *

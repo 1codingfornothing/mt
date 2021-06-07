@@ -2,6 +2,7 @@ package cn.fourtwoone.mt.dao;
 
 import cn.fourtwoone.mt.entity.NbmtUser;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -12,6 +13,8 @@ import java.util.List;
  * @since 2021-06-01 20:28:19
  */
 public interface NbmtUserDao {
+    @Select("select * from nbmt_user where username=#{username} and password=#{password}")
+    NbmtUser login(@Param("username")String username, @Param("password")String password);
 
     /**
      * 通过ID查询单条数据
