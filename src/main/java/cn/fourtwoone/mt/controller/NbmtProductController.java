@@ -74,7 +74,7 @@ public class NbmtProductController {
         nbmtProductService.update(product);
         return "redirect:/productall";
     }
-    @PostMapping("productdel")
+    @GetMapping("productdel/{id}")
     public String productdel(@PathVariable("id") Long id){
         System.out.println(id);
         nbmtProductService.deleteById(id);
